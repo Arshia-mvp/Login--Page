@@ -33,5 +33,5 @@ Welcome to the documentation for the User Authentication System project! This pr
 
 1.  Clone the project repository:
 ```bash
-git clone [Your Repository URL]
-cd [Project Folder Name]
+git clone {Your Repository URL}
+cd {Project Folder Name}
