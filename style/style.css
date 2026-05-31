@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(16, 16, 168);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card-left,
+.card-right {
+    flex: 1 1 0;
+    max-width: 50%;
+    min-width: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.card-left {
+    background: linear-gradient(135deg, rgba(34, 77, 207, 0.9), rgba(53, 120, 255, 0.9));
+}
+
+.logo-container {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    gap: 8px;
+    z-index: 1;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.dot:nth-child(2) { opacity: 0.6; }
+.dot:nth-child(3) { opacity: 0.4; }
+
+.main-title {
+    font-size: 27px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-primary {
+    background-color: white;
+    color: rgb(34, 77, 207);
+    border: 1px solid white;
+    font-size: 21px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.btn-primary:hover::before {
+    width: 100%;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 21px;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: rgb(34, 77, 207);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.btn-secondary:hover::before {
+    width: 100%;
+}
+
+.features-section {
+    margin-top: auto;
+    width: 100%;
+}
+
+.features-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.features-list a {
+    position: relative;
+    padding-right: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.features-list a::before {
+    content: '✅';
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: white;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.features-list a:hover {
+    color: #ffffff;
+    transform: translateX(-3px);
+    text-decoration: underline;
+}
+
+.forgot-password {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 14px;
+    padding-right: 20px;
+    display: inline-block;
+}
+
+.forgot-password::before{
+    content: '❌';
+    position: absolute;
+    right: -6px;
+    top: 6px;
+    font-size: 12px;
+    opacity: 1.9;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+    transform: translateX(-3px);
+    text-decoration: underline;
+}
+
+.card-right {
+    background-color: #4f7ed4;
+}
+
+.logo-container-the-second{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot-the-second{
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.dot-the-second:nth-child(2) {opacity: 0.6;}
+.dot-the-second:nth-child(3) {opacity: 0.4;}
+
+.card-right .main-title-h2{
+    font-size: 27px;
+    color: white;
+    line-height: 1.6;
+    font-weight: 700;
+    position: static;
+    margin-top: 20px;
+}
+
+.card-right .paragraph-text{
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-name,
+.input-age,
+.input-gmail,
+.input-password,
+.input-submit{
+    width: 88%;
+    max-width: 300px;
+    height: 7vh;
+    border-radius: 10px;
+    border: 3px solid #102b7c;
+    background-color: #3355bb;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.8s;
+    box-shadow: 0.5px 0.5px 30px blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-name::placeholder,
+.input-age::placeholder,
+.input-gmail::placeholder,
+.input-password::placeholder,
+.input-submit::placeholder {
+    color: wheat;
+    font-size: 13.5px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.input-name:hover,
+.input-age:hover,
+.input-gmail:hover,
+.input-password:hover,
+.input-submit:hover {
+    transform: translateX(-25px);
+    box-shadow: 0.5px 0.5px 30px aqua;
+}
+
+.input-submit{
+    width: 50%;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap');
