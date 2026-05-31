@@ -1,0 +1,50 @@
+        # Ignore build artifacts and dependency directories
+        node_modules/
+        .vscode/
+        build/
+        dist/
+
+        # Ignore OS-specific files
+        .DS_Store
+        Thumbs.db
+
+        # Ignore log files and temporary files
+        *.log
+        *.tmp
+
+        # Ignore personal config files if any
+        .bash_history
+        .gitconfig
+        .viminfo
+        .node_repl_history
+        ntuser.dat*
+        NTUSER.DAT*
+
+        # Ignore AppData and other Windows system folders
+        AppData/
+        Local Settings/
+        Application Data/
+        NetHood/
+        PrintHood/
+        Recent/
+        SendTo/
+        Start Menu/
+        Templates/
+        My Documents/
+        Contacts/
+        Favorites/
+        Links/
+        Music/
+        Pictures/
+        Saved Games/
+        Searches/
+        Videos/
+        Documents/
+        Downloads/
+        IntelGraphicsProfiles/
+        OneDrive/
+
+        # Ignore specific project files if they are not meant for repo
+        # Example: *.lnk files if they are just shortcuts
+        *.lnk
+        desktop.ini
